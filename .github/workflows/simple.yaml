@@ -5,7 +5,7 @@ on: [ push, pull_request ]
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
-    setps:
+    steps:
       - name: echo a string
         run: echo "hello world"
       -name:   multi line script
