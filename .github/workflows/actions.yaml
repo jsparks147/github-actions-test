@@ -9,7 +9,7 @@ jobs:
       - name: list files
         run: |
           pwd 
-          ls -lar
+          ls -laR
       - name: Simple Js Action  
         id: greets
         uses: actions/hello-world-javascript-action@v1
