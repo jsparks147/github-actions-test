@@ -16,7 +16,7 @@ jobs:
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
-          echo $GITHUB_TOKEn
+          echo $GITHUB_TOKEN
           echo "{{ github.token }}"
         
       - name: Simple Js Action  
