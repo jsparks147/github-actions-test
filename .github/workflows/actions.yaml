@@ -1,5 +1,6 @@
 name: Actions workflow
 on: 
+  push:
   schedule:
     - cron: "0/7 * * * *"
   # Allows you to run this workflow manually from the Actions tab
