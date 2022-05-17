@@ -49,5 +49,5 @@ jobs:
   run-windows-actions:
     runs-on: windows-latest
     steps: 
-      - name: dir command
-        run: dir          
+      - name: Get-Location command
+        run: Get-Location         
