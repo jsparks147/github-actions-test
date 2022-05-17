@@ -46,4 +46,8 @@ jobs:
           who-to-greet: me
       - name: log Greeting time
         run: echo "${{ steps.greets.outputs.time }}"
-          
+  run-windows-actions:
+    runs-on: windows-latest
+    steps: 
+      - name: dir command
+        run: dir          
