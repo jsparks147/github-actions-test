@@ -6,6 +6,7 @@ on:
       - 'feature/*' # not matching /
       - 'feature/**'
       - "!feature/featC"
+      - "!main"
     tags:
       - V1.*
     # paths:
@@ -28,26 +29,26 @@ on:
   # workflow_dispatch:    
   # repository_dispatch:
   #  types: [build]
-jobs:
-  run-github-actions:
-    runs-on: ubuntu-18.04
-    steps:
-      - name: payload
-        run: echo ${{ github.event.client_payload.environment }}
-      - name: checkout
-        uses: actions/checkout@v1
-      - name: list files
-        run: |
-          pwd       
-      - name: Simple Js Action  
-        id: greets
-        uses: actions/hello-world-javascript-action@v1
-        with:
-          who-to-greet: me
-      - name: log Greeting time
-        run: echo "${{ steps.greets.outputs.time }}"
-  run-windows-actions:
-    runs-on: windows-latest
-    steps: 
-      - name: Get-Location command
-        run: Get-Location         
+# jobs:
+  # run-github-actions:
+  #   runs-on: ubuntu-18.04
+  #   steps:
+  #     - name: payload
+  #       run: echo ${{ github.event.client_payload.environment }}
+  #     - name: checkout
+  #       uses: actions/checkout@v1
+  #     - name: list files
+  #       run: |
+  #         pwd       
+  #     - name: Simple Js Action  
+  #       id: greets
+  #       uses: actions/hello-world-javascript-action@v1
+  #       with:
+  #         who-to-greet: me
+  #     - name: log Greeting time
+  #       run: echo "${{ steps.greets.outputs.time }}"
+  # run-windows-actions:
+  #   runs-on: windows-latest
+  #   steps: 
+  #     - name: Get-Location command
+  #       run: Get-Location         
