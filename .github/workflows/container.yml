@@ -19,8 +19,9 @@ jobs:
           node -v
           cat /etc/os-release
         continue-on-error: true
+      - name: Retrieve users 1
+        run: curl http://localhost:3001/api/users         
       - name: post a user
         run: "curl -x POST http://localhost:3001/api/users -H 'Content-type: application/json' -d '{\"username\": \"hello\", \"address\": \"jomama\"}'"
-
       - name: Retrieve users 
         run: curl http://localhost:3001/api/users 
