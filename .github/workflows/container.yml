@@ -18,6 +18,7 @@ jobs:
         run: |
           node -v
           cat /etc/os-release
+        continue-on-error: true
       - name: post a user
         run: "curl -x POST http://localhost:3001/api/users -H 'Content-type: application/json' -d '{\"username\": \"hello\", \"address\": \"jomama\"}'"
 
