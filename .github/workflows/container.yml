@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-18.04
     services: 
       app:
-        image: alialaa17/node-api
+        image: jsparks/simple-docker-nodejs
         ports:
         - 3001:3000
       mongo:
