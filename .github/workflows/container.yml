@@ -24,7 +24,7 @@ jobs:
       - name: run script 
         uses: docker://node:12.14.1-alpine3.10 
         with:  
-          entrypoint: 'chmod +x ./script.sh; ./script.sh'
+          entrypoint: '/bin/chmod +x ./script.sh; ./script.sh'
           args: 'test'
 
   # node-docker:
