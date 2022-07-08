@@ -24,8 +24,7 @@ jobs:
       - name: run script 
         uses: docker://node:12.14.1-alpine3.10 
         with:  
-          entrypoint: '/bin/bash ./script.sh'
-          args: "something"
+          entrypoint: 'ls -l  ./script.sh'
 
 
   # node-docker:
